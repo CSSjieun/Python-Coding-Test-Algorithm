@@ -1,0 +1,37 @@
+# First Question
+class Sales:
+    def __init__(self, id):
+        self.id = id
+        id = 100
+        
+val = Sales(123)
+print(val.id)
+
+# Second Question
+class Person:
+    def __init__(self,id):
+        self.id = id
+        
+sam = Person(100)
+sam.__dict__['age'] = 49
+print(sam.age + len(sam.__dict__))
+
+
+# Third Question
+class A:
+    def __init__(self):
+        self.calcI(30)
+        print(self.i)
+        
+    def calcI(self, i):
+        self.i = 2 * i;
+            
+class B(A):
+    def __init__(self):
+        super().__init__()
+        
+    def calcI(self, i):
+        self.i = 3 * i;
+        
+b = B()
+    
